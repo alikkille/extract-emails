@@ -2,7 +2,7 @@
   "name": "extract-emails",
   "version": "0.0.1",
   "repository": "2tunnels/extract-emails",
-  "description": "Extract emails from page",
+  "description": "Extract emails from HTML",
   "main": "extract-emails.js",
   "scripts": {
     "test": "node ./node_modules/mocha/bin/mocha"
