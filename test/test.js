@@ -1,7 +1,7 @@
 'use strict';
 
 const assert = require('assert');
-const extractEmails = require('./../extract-emails');
+const extractEmails = require('./../src/extract-emails');
 
 describe('#extractEmails', () => {
     it('should throw an error if argument not provided', () => {
