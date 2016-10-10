@@ -1,6 +1,6 @@
 {
   "name": "extract-emails",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "repository": "2tunnels/extract-emails",
   "description": "Extract emails from HTML",
   "main": "src/extract-emails.js",
