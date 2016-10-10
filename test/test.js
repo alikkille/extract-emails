@@ -4,7 +4,30 @@ const assert = require('assert');
 const extractEmails = require('./../extract-emails');
 
 describe('#extractEmails', () => {
-    it('should return emails from html', () => {
+    it('should throw an error if argument not provided', () => {
+        assert.throws(
+            () => {
+                extractEmails();
+            },
+            Error
+        );
+    });
+
+    it('should throw an error if argument is not a string', () => {
+      assert.throws(
+          () => {
+              extractEmails(1);
+          },
+          Error
+      );
+    });
+
+    it('should return empty array if emails not found', () => {
+        let actual = extractEmails('<p>Text without emails</p>');
+        assert.deepEqual([], actual);
+    });
+
+    it('should return array of emails from html', () => {
         let expected, actual;
 
         // single email

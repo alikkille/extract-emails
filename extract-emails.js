@@ -15,6 +15,14 @@ function extractPlainEmails(html) {
 }
 
 function extractEmails(html) {
+    if (!html) {
+        throw new Error('Argument is not provided');
+    }
+
+    if (typeof html !== 'string') {
+        throw new Error('Argument is not a string');
+    }
+
     return extractPlainEmails(html);
 }
 
