@@ -44,5 +44,15 @@
             `);
             assert.deepEqual(expected, actual);
         });
+
+        it('should return array of emails from html obfuscated by cloudflare', () => {
+            let expected, actual;
+
+            expected = ['tom75hen@gmail.com'];
+            actual = extractEmails(`
+              <p>Thomas A. Henderson - <span class="__cf_email__" data-cfemail="83f7eceeb4b6ebe6edc3e4eee2eaefade0ecee">[email&#160;protected]</span></p>
+            `);
+            assert.deepEqual(expected, actual);
+        });
     });
 })();
