@@ -1,23 +1,21 @@
-(function() {
-    'use strict';
+'use strict';
 
-    const emailRegExp = /(\w+@\w+\.\w+)/ig;
+const emailRegExp = /(\w+@\w+\.\w+)/ig;
 
-    function extractPlainEmails(html) {
-        let emails = [];
+function extractPlainEmails(html) {
+    let emails = [];
 
-        let match;
+    let match;
 
-        while ((match = emailRegExp.exec(html)) !== null) {
-            emails.push(match[1]);
-        }
-
-        return emails;
+    while ((match = emailRegExp.exec(html)) !== null) {
+        emails.push(match[1]);
     }
 
-    function extractEmails(html) {
-        return extractPlainEmails(html);
-    }
+    return emails;
+}
 
-    module.exports = extractEmails;
-})();
+function extractEmails(html) {
+    return extractPlainEmails(html);
+}
+
+module.exports = extractEmails;
